@@ -1,0 +1,253 @@
+.product-detail {
+  display: flex;
+  flex-direction: row; /* changed from column to row */
+  align-items: center; /* vertically center items */
+  justify-content: space-between; /* space between image and button */
+  min-height: 100vh;
+  padding: 30px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+
+.product-detail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(245, 245, 245, 0.6); /* overlay semi-transparent */
+  z-index: 0;
+}
+
+.product-detail > * {
+  position: relative;
+  z-index: 1; /* pour que le contenu soit au-dessus de l'overlay */
+}
+
+
+.detail-img {
+  width: 300px;
+  max-width: 90%;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.detail-img:hover {
+  transform: scale(1.05);
+}
+
+.product-detail h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.product-detail p {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #000000;
+  text-align: center;
+}
+
+.buy-button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #000;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buy-button:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* fond sombre semi-transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer; /* clic pour fermer */
+}
+
+/* Image agrandie */
+.modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.modal-img:hover {
+  transform: scale(1.05);
+}
+/* Overlay semi-transparent derrière la modal */
+/* Fond de la modal/formulaire */
+.purchase-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* plus sombre pour un meilleur focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Contenu du formulaire */
+.purchase-form form {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+/* Titre du formulaire */
+.purchase-form h3 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Inputs */
+.purchase-form input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.purchase-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  outline: none;
+}
+
+/* Boutons */
+.purchase-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.purchase-form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.purchase-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.purchase-form button[type="button"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+.purchase-form button[type="button"]:hover {
+  background-color: #5a6268;
+}
+
+/* Affichage en ligne des boutons */
+.purchase-form .button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.product-content {
+  display: flex;
+  flex-direction: row; /* image left, info right */
+  align-items: center;
+  gap: 40px; /* space between image and info */
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* space between name, price, button */
+}
+
+/* Style image du produit */
+.detail-img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.detail-img:hover {
+  transform: scale(1.05);
+}
+
+/* Bouton acheter */
+.buy-button {
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.buy-button:hover {
+  background-color: #8f0000;
+}
+
+/* Modal pour agrandir l'image */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}

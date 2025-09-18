@@ -1,0 +1,184 @@
+.choix-container {
+  margin: 20px auto;
+  max-width: 900px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.choix-title {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.filters-line {
+  margin-bottom: 18px;
+}
+
+.filters-line h3 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-buttons button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filter-buttons button:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.filter-buttons button.active {
+  background: linear-gradient(120deg, #4a6fa5, #e6c07b);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* debug affichage choix */
+.choix-result {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #555;
+}
+.results {
+  margin-top: 24px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.results h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.results li {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 220px)); /* ✅ largeur fixe */
+  justify-content: center; /* ✅ centre les cartes si < largeur max */
+  gap: 16px;
+  margin-top: 16px;
+}
+
+
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 12px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+.product-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-name {
+  font-size: 1rem;
+  margin: 8px 0 4px;
+  font-weight: 600;
+}
+
+.product-price {
+  color: #e6c07b;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #f5f2e9; /* beige style */
+  color: #000;
+}
+
+.choix-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: #111;
+}
+
+button.active {
+  background-color: #b30a0a; /* Burberry red accent */
+  color: white;
+}
+.choix-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* passe derrière le contenu */
+}
+
+.choix-container {
+  position: relative;
+  z-index: 2; /* contenu au-dessus de la vidéo */
+  background: rgba(255, 255, 255, 0.7); /* léger voile blanc */
+  padding: 2rem;
+  border-radius: 16px;
+  margin: 2rem;
+}
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* voile sombre */
+  z-index: 1;
+}
+.choix-container {
+  position: relative;
+  z-index: 2;
+}
+.choix-title {
+  color: #fff; /* ou doré #d4af37 style luxe */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  font-weight: bold;
+  font-size: 2rem;
+}
