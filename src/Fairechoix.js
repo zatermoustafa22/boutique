@@ -22,25 +22,6 @@ import WatchmenImg from './assets/watchmen.jpg';
 import BraceltwomenImg from './assets/braceletwomen.jpg';
 import Braceltwomen2Img from './assets/braceletwomen2.jpg';
 
-export default function Fairechoix({ category, onBack }) {
-  const [type, setType] = useState(null);
-  const [filters, setFilters] = useState({ couleur: null, prix: null});
-
-
-  const handleTypeChange = (value) => {
-    setType(prev => (prev === value ? null : value));
-  };
-
-  const handleFilterChange = (filterName, value) => {
-    setFilters(prev => ({
-      ...prev,
-      [filterName]: prev[filterName] === value ? null : value,
-    }));
-  };
-
-const productTypes = category === 'femme'
-  ? ['Écharpes', 'Sacs', 'Manteaux', 'Wallet', 'Ceintures', 'Bracelets','Watch']
-  : ['Écharpes', 'Sacs', 'Manteaux', 'Wallet', 'Bracelets', 'Ceintures','Watch'];
 
 
   const allProducts = [
@@ -63,9 +44,30 @@ const productTypes = category === 'femme'
   { id: 17, name: 'Bracelet or rose', type: 'Bracelets', couleur: 'or rose', prix: 'moins50', gender: 'femme', image: BraceltwomenImg, price: '30€' },
   { id: 18, name: 'Bracelet or', type: 'Bracelets', couleur: 'or', prix: 'moins50', gender: 'femme', image: Braceltwomen2Img, price: '30€' },
 ];
+export default function Fairechoix({ category, onBack }) {
+  const [type, setType] = useState(null);
+  const [filters, setFilters] = useState({ couleur: null, prix: null});
 
 
-// eslint-disable-next-line react-hooks/exhaustive-deps
+  const handleTypeChange = (value) => {
+    setType(prev => (prev === value ? null : value));
+  };
+
+  const handleFilterChange = (filterName, value) => {
+    setFilters(prev => ({
+      ...prev,
+      [filterName]: prev[filterName] === value ? null : value,
+    }));
+  };
+
+const productTypes = category === 'femme'
+  ? ['Écharpes', 'Sacs', 'Manteaux', 'Wallet', 'Ceintures', 'Bracelets','Watch']
+  : ['Écharpes', 'Sacs', 'Manteaux', 'Wallet', 'Bracelets', 'Ceintures','Watch'];
+
+
+
+
+
  const filteredProducts = useMemo(() => {
   return allProducts.filter(p => {
     if (category === 'homme' && p.gender === 'femme') return false;
@@ -79,7 +81,7 @@ const productTypes = category === 'femme'
 
     return true;
   });
-}, [allProducts, type, filters, category]);
+}, [type, filters, category]);
 
 
   return (
