@@ -79,7 +79,7 @@ const productTypes = category === 'femme'
 
     return true;
   });
-}, [type, filters, category]);
+}, [allProducts, type, filters, category]);
 
 
   return (
