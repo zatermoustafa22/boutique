@@ -3,9 +3,9 @@ import './Fairechoix.css';
 import kashniImg from './assets/kashni.jpg';
 import kashniImg2 from './assets/kashni2.jpg';
 import burberryVideo from './assets/burberryy.mp4';
-import burberrybackground from './assets/background.jpg';
+
 import MontoImg from './assets/monto.jpg';
-import { Link, useNavigate } from "react-router-dom";
+
 import SacImg from './assets/sac.jpg';
 import SacmenImg from './assets/sacmen.jpg';
 import WalletwomenImg from './assets/walletwomen.jpg';
@@ -25,7 +25,7 @@ import Braceltwomen2Img from './assets/braceletwomen2.jpg';
 export default function Fairechoix({ category, onBack }) {
   const [type, setType] = useState(null);
   const [filters, setFilters] = useState({ couleur: null, prix: null});
-const navigate = useNavigate();
+
 
   const handleTypeChange = (value) => {
     setType(prev => (prev === value ? null : value));

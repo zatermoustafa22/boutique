@@ -19,7 +19,7 @@ import Braceltwomen2Img from './assets/braceletwomen2.jpg';
 import kashniImg from './assets/kashni.jpg';
 import kashniImg2 from './assets/kashni2.jpg';
 import MontoImg from './assets/monto.jpg';
-import backgroundImg from './assets/background.jpg';
+
 
 
   const allProducts = [
