@@ -65,7 +65,7 @@ const productTypes = category === 'femme'
 ];
 
 
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
  const filteredProducts = useMemo(() => {
   return allProducts.filter(p => {
     if (category === 'homme' && p.gender === 'femme') return false;
