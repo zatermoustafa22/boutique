@@ -15,5 +15,6 @@ Flux utilisateur : choisir le sexe (Homme / Femme), filtrer par catégories + at
 - Page de checkout simple — à la validation : message **“Ceci est un site fake”**
 - Frontend : JavaScript (React) + CSS 
 
+## demo : https://fakezaterberburry.netlify.app/
 
 
